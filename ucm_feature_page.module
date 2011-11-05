@@ -4,4 +4,4 @@
  * Code for the UCM Page feature.
  */
 
-include_once('ucm_features_page.features.inc');
+include_once('ucm_page.features.inc');
