@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ucm_page.features.inc
+ * ucm_feature_page.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function ucm_page_ctools_plugin_api() {
+function ucm_feature_page_ctools_plugin_api() {
   list($module, $api) = func_get_args();
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
@@ -17,7 +17,7 @@ function ucm_page_ctools_plugin_api() {
 /**
  * Implements hook_node_info().
  */
-function ucm_page_node_info() {
+function ucm_feature_page_node_info() {
   $items = array(
     'page' => array(
       'name' => t('Page'),

@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ucm_page.features.menu_links.inc
+ * ucm_feature_page.features.menu_links.inc
  */
 
 /**
  * Implements hook_menu_default_menu_links().
  */
-function ucm_page_menu_default_menu_links() {
+function ucm_feature_page_menu_default_menu_links() {
   $menu_links = array();
 
   // Exported menu link: menu-toolbar-administrator:node/add/page
