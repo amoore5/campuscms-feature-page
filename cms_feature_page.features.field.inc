@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ucm_feature_page.features.field.inc
+ * cms_feature_page.features.field.inc
  */
 
 /**
  * Implements hook_field_default_fields().
  */
-function ucm_feature_page_field_default_fields() {
+function cms_feature_page_field_default_fields() {
   $fields = array();
 
   // Exported field: 'node-page-body'

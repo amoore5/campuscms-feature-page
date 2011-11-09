@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the UCM Page feature.
- */
-
-include_once('ucm_feature_page.features.inc');
