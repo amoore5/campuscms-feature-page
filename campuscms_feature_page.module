@@ -4,4 +4,4 @@
  * Code for the CMS Page feature.
  */
 
-include_once('cms_feature_page.features.inc');
+include_once('campuscms_feature_page.features.inc');
