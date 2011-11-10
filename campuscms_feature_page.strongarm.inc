@@ -62,9 +62,16 @@ function campuscms_feature_page_strongarm() {
     ),
     'field_page_image' => array(
       'region' => 'right',
-      'weight' => '32',
+      'weight' => '0',
       'has_required' => FALSE,
       'title' => 'Image',
+      'hidden' => 0,
+    ),
+    'field_page_documents' => array(
+      'region' => 'right',
+      'weight' => '1',
+      'has_required' => FALSE,
+      'title' => 'Documents',
       'hidden' => 0,
     ),
   );

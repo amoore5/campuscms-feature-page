@@ -82,6 +82,90 @@ function campuscms_feature_page_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-page-field_page_documents'
+  $fields['node-page-field_page_documents'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_page_documents',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'module' => 'file',
+      'settings' => array(
+        'display_default' => 0,
+        'display_field' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'file',
+    ),
+    'field_instance' => array(
+      'bundle' => 'page',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'file',
+          'settings' => array(),
+          'type' => 'file_default',
+          'weight' => 2,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_page_documents',
+      'label' => 'Documents',
+      'required' => 0,
+      'settings' => array(
+        'description_field' => 1,
+        'file_directory' => 'page/documents',
+        'file_extensions' => 'txt pdf doc docx ppt pptx odt ods xls xlsx odp zip',
+        'max_filesize' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'file',
+        'settings' => array(
+          'insert' => 1,
+          'insert_class' => '',
+          'insert_default' => 'auto',
+          'insert_styles' => array(
+            'auto' => 'auto',
+            'image' => 0,
+            'image_large' => 0,
+            'image_medium' => 0,
+            'image_thumbnail' => 0,
+            'link' => 0,
+          ),
+          'insert_width' => '',
+          'progress_indicator' => 'bar',
+        ),
+        'type' => 'file_generic',
+        'weight' => '33',
+      ),
+    ),
+  );
+
   // Exported field: 'node-page-field_page_image'
   $fields['node-page-field_page_image'] = array(
     'field_config' => array(
@@ -139,7 +223,7 @@ function campuscms_feature_page_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 1,
-        'file_directory' => 'images/page',
+        'file_directory' => 'page/images',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
         'max_resolution' => '',
@@ -151,6 +235,18 @@ function campuscms_feature_page_field_default_fields() {
         'active' => 1,
         'module' => 'image',
         'settings' => array(
+          'insert' => 1,
+          'insert_class' => '',
+          'insert_default' => 'auto',
+          'insert_styles' => array(
+            'auto' => 'auto',
+            'image' => 0,
+            'image_large' => 'image_large',
+            'image_medium' => 'image_medium',
+            'image_thumbnail' => 0,
+            'link' => 0,
+          ),
+          'insert_width' => '',
           'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'bar',
         ),
@@ -164,6 +260,7 @@ function campuscms_feature_page_field_default_fields() {
   // Included for use with string extractors like potx.
   t('Add your images here.');
   t('Body');
+  t('Documents');
   t('Image');
 
   return $fields;
