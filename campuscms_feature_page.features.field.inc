@@ -256,12 +256,75 @@ function campuscms_feature_page_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-page-field_submit_buttons'
+  $fields['node-page-field_submit_buttons'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_submit_buttons',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'module' => 'markup',
+      'settings' => array(
+        'markup' => '<script type="text/javascript">jQuery(document).ready(function($) {
+var buttons = \'\';
+$(\'#edit-actions input\').each(function() {
+  buttons += \'<input type="button" class="form-submit" value="\' + $(this).val() + \'" onClick="document.getElementById(\\\'\' + $(this).attr(\'id\') + \'\\\').click();" />\'; 
+});
+
+$(\'#edit-field-submit-buttons\').prepend(buttons);
+});
+</script>
+<div id="edit-field-submit-buttons"></div>',
+      ),
+      'translatable' => '0',
+      'type' => 'markup',
+    ),
+    'field_instance' => array(
+      'bundle' => 'page',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'markup',
+          'settings' => array(),
+          'type' => 'markup_default',
+          'weight' => 3,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_submit_buttons',
+      'label' => 'Submit Buttons',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'markup',
+        'settings' => array(),
+        'type' => 'markup',
+        'weight' => '34',
+      ),
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Add your images here.');
   t('Body');
   t('Documents');
   t('Image');
+  t('Submit Buttons');
 
   return $fields;
 }
