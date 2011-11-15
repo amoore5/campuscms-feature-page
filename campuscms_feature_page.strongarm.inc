@@ -74,11 +74,11 @@ function campuscms_feature_page_strongarm() {
       'title' => 'Documents',
       'hidden' => 0,
     ),
-    'field_submit_buttons' => array(
+    'field_page_submit_buttons' => array(
       'region' => 'right',
       'weight' => '0',
       'has_required' => FALSE,
-      'title' => 'Submit Buttions',
+      'title' => 'Submit Buttons',
       'hidden' => 0,
     ),
   );

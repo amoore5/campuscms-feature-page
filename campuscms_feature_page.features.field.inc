@@ -256,31 +256,22 @@ function campuscms_feature_page_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-page-field_submit_buttons'
-  $fields['node-page-field_submit_buttons'] = array(
+  // Exported field: 'node-page-field_page_submit_buttons'
+  $fields['node-page-field_page_submit_buttons'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_submit_buttons',
+      'field_name' => 'field_page_submit_buttons',
       'foreign keys' => array(),
       'indexes' => array(),
-      'module' => 'markup',
+      'module' => 'submit_field',
       'settings' => array(
-        'markup' => '<script type="text/javascript">jQuery(document).ready(function($) {
-var buttons = \'\';
-$(\'#edit-actions input\').each(function() {
-  buttons += \'<input type="button" class="form-submit" value="\' + $(this).val() + \'" onClick="document.getElementById(\\\'\' + $(this).attr(\'id\') + \'\\\').click();" />\'; 
-});
-
-$(\'#edit-field-submit-buttons\').prepend(buttons);
-});
-</script>
-<div id="edit-field-submit-buttons"></div>',
+        'submit_field' => '',
       ),
       'translatable' => '0',
-      'type' => 'markup',
+      'type' => 'submit_field',
     ),
     'field_instance' => array(
       'bundle' => 'page',
@@ -289,9 +280,9 @@ $(\'#edit-field-submit-buttons\').prepend(buttons);
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'markup',
+          'module' => NULL,
           'settings' => array(),
-          'type' => 'markup_default',
+          'type' => 'submit_field_default',
           'weight' => 3,
         ),
         'teaser' => array(
@@ -302,7 +293,7 @@ $(\'#edit-field-submit-buttons\').prepend(buttons);
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_submit_buttons',
+      'field_name' => 'field_page_submit_buttons',
       'label' => 'Submit Buttons',
       'required' => 0,
       'settings' => array(
@@ -310,9 +301,9 @@ $(\'#edit-field-submit-buttons\').prepend(buttons);
       ),
       'widget' => array(
         'active' => 0,
-        'module' => 'markup',
+        'module' => 'submit_field',
         'settings' => array(),
-        'type' => 'markup',
+        'type' => 'submit_field',
         'weight' => '34',
       ),
     ),
