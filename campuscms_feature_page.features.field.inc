@@ -49,7 +49,7 @@ function campuscms_feature_page_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 0,
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -119,10 +119,9 @@ function campuscms_feature_page_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'file',
           'settings' => array(),
-          'type' => 'file_default',
-          'weight' => 2,
+          'type' => 'hidden',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -201,14 +200,10 @@ function campuscms_feature_page_field_default_fields() {
       'description' => 'Add your images here.',
       'display' => array(
         'default' => array(
-          'label' => 'above',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => '',
-            'image_style' => '',
-          ),
-          'type' => 'image',
-          'weight' => 1,
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -280,10 +275,9 @@ function campuscms_feature_page_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => NULL,
           'settings' => array(),
-          'type' => 'submit_field_default',
-          'weight' => 3,
+          'type' => 'hidden',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
