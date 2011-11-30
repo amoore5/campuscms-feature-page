@@ -5,15 +5,3 @@
  */
 
 include_once('campuscms_feature_page.features.inc');
-
-
-/**
- * Implements hook_form_alter().
- */
-function campuscms_feature_page_form_alter(&$form, &$form_state, $form_id) {
-  if ($form_id == 'page_node_form') {
-    $form['#attached']['css'] = array(
-      drupal_get_path('module', 'campuscms_feature_page') . '/campuscms-feature-page.css',
-    );
-  }
-}
