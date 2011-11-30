@@ -4,5 +4,4 @@ api = 2
 
 ; Contrib modules
 projects[insert] = 1.1
-projects[nodeformcols] = 1.x-dev
 projects[submit_field] = 1.3
