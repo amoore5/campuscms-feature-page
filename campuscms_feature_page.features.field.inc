@@ -10,16 +10,14 @@
 function campuscms_feature_page_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-page-body'
-  $fields['node-page-body'] = array(
+  // Exported field: 'node-page-field_page_body'
+  $fields['node-page-field_page_body'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
-      'entity_types' => array(
-        0 => 'node',
-      ),
-      'field_name' => 'body',
+      'entity_types' => array(),
+      'field_name' => 'field_page_body',
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -36,7 +34,7 @@ function campuscms_feature_page_field_default_fields() {
       'module' => 'text',
       'settings' => array(),
       'translatable' => '0',
-      'type' => 'text_with_summary',
+      'type' => 'text_long',
     ),
     'field_instance' => array(
       'bundle' => 'page',
@@ -45,39 +43,35 @@ function campuscms_feature_page_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'hidden',
+          'label' => 'above',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '0',
+          'weight' => 4,
         ),
         'teaser' => array(
-          'label' => 'hidden',
-          'module' => 'text',
-          'settings' => array(
-            'trim_length' => 600,
-          ),
-          'type' => 'text_summary_or_trimmed',
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
           'weight' => 0,
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'body',
+      'field_name' => 'field_page_body',
       'label' => 'Body',
-      'required' => FALSE,
+      'required' => 0,
       'settings' => array(
-        'display_summary' => TRUE,
-        'text_processing' => 1,
+        'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
+        'active' => 1,
         'module' => 'text',
         'settings' => array(
-          'rows' => 20,
-          'summary_rows' => 5,
+          'rows' => '5',
         ),
-        'type' => 'text_textarea_with_summary',
-        'weight' => '31',
+        'type' => 'text_textarea',
+        'weight' => '1',
       ),
     ),
   );
@@ -160,7 +154,7 @@ function campuscms_feature_page_field_default_fields() {
           'progress_indicator' => 'bar',
         ),
         'type' => 'file_generic',
-        'weight' => '33',
+        'weight' => '5',
       ),
     ),
   );
@@ -246,7 +240,7 @@ function campuscms_feature_page_field_default_fields() {
           'progress_indicator' => 'bar',
         ),
         'type' => 'image_image',
-        'weight' => '32',
+        'weight' => '4',
       ),
     ),
   );
@@ -298,7 +292,7 @@ function campuscms_feature_page_field_default_fields() {
         'module' => 'submit_field',
         'settings' => array(),
         'type' => 'submit_field',
-        'weight' => '34',
+        'weight' => '6',
       ),
     ),
   );

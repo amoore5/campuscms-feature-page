@@ -53,13 +53,6 @@ function campuscms_feature_page_strongarm() {
       'title' => 'Save',
       'hidden' => 0,
     ),
-    'body' => array(
-      'region' => 'main',
-      'weight' => '1',
-      'has_required' => FALSE,
-      'title' => 'Body',
-      'hidden' => 0,
-    ),
     'field_page_image' => array(
       'region' => 'right',
       'weight' => '1',
@@ -79,6 +72,13 @@ function campuscms_feature_page_strongarm() {
       'weight' => '0',
       'has_required' => FALSE,
       'title' => 'Submit Buttons',
+      'hidden' => 0,
+    ),
+    'field_page_body' => array(
+      'region' => 'main',
+      'weight' => '1',
+      'has_required' => FALSE,
+      'title' => 'Body',
       'hidden' => 0,
     ),
   );
