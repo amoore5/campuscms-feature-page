@@ -61,7 +61,7 @@ function campuscms_feature_page_field_default_fields() {
       'label' => 'Body',
       'required' => 0,
       'settings' => array(
-        'text_processing' => '0',
+        'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
