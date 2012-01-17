@@ -109,7 +109,7 @@ function campuscms_feature_page_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'page',
       'deleted' => '0',
-      'description' => '',
+      'description' => 'In order for links to uploaded documents to display, you must specify where the document link should be located in your content. In the "Description" field, enter the link text. Place your cursor in the "Body" field in the exact location you want the document link, then click "Insert." To remove a document link, highlight the link text in the "Body" field, then press "Delete." Clicking "Remove" next to an uploaded document removes it from your site, but does not remove the link to it in your content.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -191,7 +191,7 @@ function campuscms_feature_page_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'page',
       'deleted' => '0',
-      'description' => 'Add your images here.',
+      'description' => 'In order for uploaded images to display, you must specify where the image should be located in your content. Place your cursor in the "Body" field in the exact location you want it, then click "Insert." Once inserted into the content, images are left-aligned by default. To change the alignment of your image, right click on the image, then select "Image Properties." Click the "Advanced" tab, and enter "image-right" to right align your image or "image-center" to center align it. To remove an image from your content, click on the image in the "Body" field, then press "Delete."  Clicking "Remove" next to an uploaded image removes it from your site.',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
