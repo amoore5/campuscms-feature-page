@@ -109,7 +109,7 @@ function campuscms_feature_page_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'page',
       'deleted' => '0',
-      'description' => 'In order for links to uploaded documents to display, you must specify where the document link should be located in your content. In the "Description" field, enter the link text. Place your cursor in the "Body" field in the exact location you want the document link, then click "Insert." To remove a document link, highlight the link text in the "Body" field, then press "Delete." Clicking "Remove" next to an uploaded document removes it from your site, but does not remove the link to it in your content.',
+      'description' => 'To specify where linked documents should display in your content, place your cursor in the "Body" field in the exact location you want the link then click "Insert." To remove the link, highlight the link text in the "Body" field, then press "Delete." Clicking "Remove" next to an uploaded document removes it from your site, but does not remove the link in your content.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -191,7 +191,7 @@ function campuscms_feature_page_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'page',
       'deleted' => '0',
-      'description' => 'In order for uploaded images to display, you must specify where the image should be located in your content. Place your cursor in the "Body" field in the exact location you want it, then click "Insert." Once inserted into the content, images are left-aligned by default. To change the alignment of your image, right click on the image, then select "Image Properties." Click the "Advanced" tab, and enter "image-right" to right align your image or "image-center" to center align it. To remove an image from your content, click on the image in the "Body" field, then press "Delete."  Clicking "Remove" next to an uploaded image removes it from your site.',
+      'description' => 'To specify where uploaded images should display in your content, place your cursor in the "Body" field in the exact location you want the image then click "Insert." To change the alignment of an image, right click on the image and "Image Properties," click the "Advanced" tab and enter "image-right" or "image-center." To remove an image, click on the image in the "Body" field, then press "Delete." Clicking "Remove" next to an uploaded image removes it from your site, not the page itself.',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
