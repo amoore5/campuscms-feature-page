@@ -1,0 +1,22 @@
+<?php
+/**
+ * Implements hook_install().
+ */
+function campuscms_feature_page_install() {
+  // Add node breadcrumb.
+  $breadcrumb = new stdClass();
+  $breadcrumb->name = 'campuscms_feature_page-node-page';
+  $breadcrumb->titles = array('Menu Parent Trail', '[node:title]');
+  $breadcrumb->paths = array('<menu-parent-trail>', '<none>');
+  $breadcrumb->visibility_php = '';
+  $breadcrumb->node_type = 'page';
+
+  _custom_breadcrumbs_save_breadcrumb('custom_breadcrumbs', 'node', $breadcrumb);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function campuscms_feature_page_uninstall() {
+  db_delete('custom_breadcrumb')->condition('name', 'campuscms_feature_page-%', 'LIKE')->execute();
+}
