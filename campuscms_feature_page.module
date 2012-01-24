@@ -13,7 +13,7 @@ function campuscms_feature_page_modules_installed($modules) {
   print_r($modules);
   if (in_array('custom_breadcrumbs', $modules)) {
     $query = db_select('custom_breadcrumb')->condition('name', 'campuscms_feature_page-%', 'LIKE');
-    if ($query->countQuery()->execute()->fetchField()) {
+    if (!$query->countQuery()->execute()->fetchField()) {
       _campuscms_feature_page_custom_breadcrumbs();
     }
   }
