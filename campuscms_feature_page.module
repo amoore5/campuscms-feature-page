@@ -5,3 +5,28 @@
  */
 
 include_once('campuscms_feature_page.features.inc');
+
+/**
+ * Implements hook_modules_enabled().
+ */
+function campuscms_feature_page_modules_enabled($modules) {
+  if (in_array('custom_breadcrumbs', $modules)) {
+    $query = db_select('custom_breadcrumb')->condition('name', 'campuscms_feature_page-%', 'LIKE');
+    if ($query->countQuery()->execute()->fetchField()) {
+      _campuscms_feature_page_custom_breadcrumbs();
+    }
+  }
+}
+
+// Create some breadcrumbs
+function _campuscms_feature_page_custom_breadcrumbs() {
+  // Add node breadcrumb.
+  $breadcrumb = new stdClass();
+  $breadcrumb->name = 'campuscms_feature_page-node-page';
+  $breadcrumb->titles = array('Menu Parent Trail', '[node:title]');
+  $breadcrumb->paths = array('<menu-parent-trail>', '<none>');
+  $breadcrumb->visibility_php = '';
+  $breadcrumb->node_type = 'page';
+
+  _custom_breadcrumbs_save_breadcrumb('custom_breadcrumbs', 'node', $breadcrumb);
+}
