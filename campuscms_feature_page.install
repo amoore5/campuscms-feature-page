@@ -12,5 +12,7 @@ function campuscms_feature_page_install() {
  * Implements hook_uninstall().
  */
 function campuscms_feature_page_uninstall() {
-  db_delete('custom_breadcrumb')->condition('name', 'campuscms_feature_page-%', 'LIKE')->execute();
+  if (module_exists('custom_breadcrumbs')) {
+    db_delete('custom_breadcrumbs')->condition('name', 'campuscms_feature_page-%', 'LIKE')->execute();
+  }
 }
