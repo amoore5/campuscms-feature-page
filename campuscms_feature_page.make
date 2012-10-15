@@ -3,7 +3,7 @@ core = 7.x
 api = 2
 
 ; Contrib modules
-projects[insert] = 1.1
+projects[insert] = 1.2
 
 ; 1.x Last commit October 16, 2011
 projects[nodeformcols][type] = module
